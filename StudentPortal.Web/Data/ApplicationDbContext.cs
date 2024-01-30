@@ -13,7 +13,7 @@ namespace StudentPortal.Web.Data
         public DbSet<Student> Students { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<DiscussionForum> DiscussionForums { get;set; }
-
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<AttendanceTracking> AttendanceTrackings { get; set; }
     }
 }
