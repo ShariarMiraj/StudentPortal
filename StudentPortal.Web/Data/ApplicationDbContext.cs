@@ -15,5 +15,7 @@ namespace StudentPortal.Web.Data
         public DbSet<DiscussionForum> DiscussionForums { get;set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<AttendanceTracking> AttendanceTrackings { get; set; }
+        public DbSet<Fee> fees { get; set; }
+
     }
 }
