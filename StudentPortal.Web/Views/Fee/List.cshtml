@@ -34,7 +34,7 @@
                 <td>@fee.PaymentDate</td>
 
                 <td>
-                    <a class="btn btn-primary">Edit</a>
+                    <a class="btn btn-primary" asp-controller="Fee" asp-action="Edit" asp-route-id="@fee.FeeId">Edit</a>
                 </td>
             </tr>
         }
