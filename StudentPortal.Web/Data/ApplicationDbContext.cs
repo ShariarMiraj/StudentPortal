@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using StudentPortal.Web.Models.Domain;
 using StudentPortal.Web.Models.Entities;
 
 namespace StudentPortal.Web.Data
@@ -16,6 +17,8 @@ namespace StudentPortal.Web.Data
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<AttendanceTracking> AttendanceTrackings { get; set; }
         public DbSet<Fee> fees { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<Tag> Tags { get; set; }
 
     }
 }
