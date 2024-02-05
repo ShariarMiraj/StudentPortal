@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using StudentPortal.Web.Data;
+using StudentPortal.Web.Repo.Abstract;
+using StudentPortal.Web.Repo.Implementation;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +11,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options => 
 options.UseSqlServer(builder.Configuration.GetConnectionString("StudentPortal")));
+
+
+builder.Services.AddScoped<IGenreService,GenraServices>();
+
 
 
 var app = builder.Build();

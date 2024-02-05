@@ -16,9 +16,11 @@ namespace StudentPortal.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult Add()
+        public async  Task<IActionResult> Add()
         {
-            return View();
+            var students = await dbContext.Students.ToListAsync();
+
+            return View(students);
         }
 
 
