@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+
+
+@model IEnumerable<StudentPortal.Web.Models.Domain.Genre>
+
+
+
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <a class="btn btn-primary" href="/Genra/Add">Add More</a>
+
+            <h3>Add Genra</h3>
+            <table class="table table-striped table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th>NAme</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ( var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>
+                                <a class="btn btn-success" href="/Genra/Update?id=@item.Id">Edit</a>
+                                <a class="btn btn-danger" onclick="return window.confirm("Are you sure ?")" href="/Genra/Delete?id=@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
