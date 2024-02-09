@@ -15,6 +15,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("StudentPortal"))
 
 builder.Services.AddScoped<IGenreService,GenraServices>();
 builder.Services.AddScoped<IAuthService,AuthorService>();
+builder.Services.AddScoped<IPublisher, PublisherService>();
 
 
 
@@ -37,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Authors}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
