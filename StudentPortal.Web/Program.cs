@@ -16,7 +16,7 @@ options.UseSqlServer(builder.Configuration.GetConnectionString("StudentPortal"))
 builder.Services.AddScoped<IGenreService,GenraServices>();
 builder.Services.AddScoped<IAuthService,AuthorService>();
 builder.Services.AddScoped<IPublisher, PublisherService>();
-
+builder.Services.AddScoped<IBookService, BookService>();
 
 
 var app = builder.Build();
